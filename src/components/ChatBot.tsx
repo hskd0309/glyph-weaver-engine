@@ -82,7 +82,7 @@ const ChatBot: React.FC = () => {
 
       {/* Chat Window */}
       {isOpen && (
-        <Card className="fixed bottom-6 right-6 w-80 h-96 shadow-2xl z-50 flex flex-col">
+        <Card className="fixed bottom-6 right-6 w-80 h-96 shadow-2xl z-50 flex flex-col bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
           <CardHeader className="pb-3">
             <div className="flex items-center justify-between">
               <CardTitle className="text-lg">Campus Assistant</CardTitle>
