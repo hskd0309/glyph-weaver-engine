@@ -9,13 +9,15 @@ import Login from "./components/Login";
 import StudentLayout from "./components/student/StudentLayout";
 import StaffLayout from "./components/staff/StaffLayout";
 import CounsellorLayout from "./components/counsellor/CounsellorLayout";
+import { ThemeProvider } from "next-themes";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+      <TooltipProvider>
+        <Toaster />
       <Sonner />
       <BrowserRouter>
         <Routes>
@@ -29,7 +31,8 @@ const App = () => (
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
-  </QueryClientProvider>
+  </ThemeProvider>
+</QueryClientProvider>
 );
 
 export default App;
